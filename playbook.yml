@@ -27,3 +27,8 @@
         reputation: 0
         singularity: 0
         sld_id: 0
+    register: fw_data
+
+  - name: Display info
+    debug:
+      msg: "{{ fw_data }}"
