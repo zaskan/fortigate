@@ -1,6 +1,14 @@
 ---
 - hosts: ip-172-31-20-205.eu-west-1.compute.internal
+  collections:
+   - fortinet.fortios
+  connection: httpapi
   gather_facts: no
+  vars:
+   vdom: "root"
+   ansible_httpapi_use_ssl: yes
+   ansible_httpapi_validate_certs: no
+   ansible_httpapi_port: 443
   tasks:
   - name: fortios_firewall_internet_service
     fortinet.fortios.fortios_firewall_internet_service:
