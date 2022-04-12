@@ -1,5 +1,5 @@
 ---
-- hosts: ip-172-31-34-42.eu-west-1.compute.internal
+- hosts: ip-172-31-20-205.eu-west-1.compute.internal
   gather_facts: yes
   tasks:
     - name: Test
