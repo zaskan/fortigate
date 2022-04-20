@@ -32,3 +32,26 @@
   - name: Display info
     debug:
       msg: "{{ fw_data }}"
+      
+    - name: Configure devices.
+    fortios_firewall_policy:
+      vdom:  root
+      state: present
+      firewall_policy:
+        policyid: 27
+        srcintf:
+          - name: port1
+        dstintf:
+          - name: port1
+        srcaddr:
+          - name: all
+        dstaddr:
+          - name: all
+        action: accept
+        service:
+          - name: ALL
+        name: testPolicy
+        status: enable
+        schedule: always
+        logtraffic: all
+        logtraffic_start: disable
