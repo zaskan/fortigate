@@ -14,7 +14,7 @@
   - name: Configure devices.
     fortios_firewall_policy:
       vdom:  root
-      state: present
+      state: "{{ state }}"
       firewall_policy:
         policyid: "{{ pid }}"
         srcintf:
@@ -33,3 +33,4 @@
         schedule: always
         logtraffic: all
         logtraffic_start: disable
+     
