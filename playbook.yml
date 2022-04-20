@@ -33,7 +33,7 @@
     debug:
       msg: "{{ fw_data }}"
       
-    - name: Configure devices.
+  - name: Configure devices.
     fortios_firewall_policy:
       vdom:  root
       state: present
