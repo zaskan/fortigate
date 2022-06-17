@@ -7,8 +7,6 @@
   
   - name: Configure devices.
     fortios_firewall_policy:
-      username: "{{ ansible_user }}"
-      password: "{{ ansible_password }}"
       vdom:  root
       state: "{{ state }}"
       firewall_policy:
