@@ -4,7 +4,6 @@
    - fortinet.fortios
   gather_facts: no
   tasks:
-  
   - name: Configure devices.
     fortios_firewall_policy:
       vdom:  root
