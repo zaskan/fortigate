@@ -10,6 +10,9 @@
    ansible_httpapi_validate_certs: no
    ansible_httpapi_port: 443
   tasks:
+
+  - debug:
+      msg: "{{ ansible_user }} {{ ansible_password }}"
       
   - name: Configure devices.
     fortios_firewall_policy:
