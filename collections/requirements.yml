@@ -1,3 +1,4 @@
 ---
 collections:
 - fortinet.fortios
+- fortinet.fortimanager  
