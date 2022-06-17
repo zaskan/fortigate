@@ -2,13 +2,7 @@
 - hosts: fortimanager
   collections:
    - fortinet.fortimanager
-  connection: httpapi
   gather_facts: no
-  vars:
-   vdom: "root"
-   ansible_httpapi_use_ssl: yes
-   ansible_httpapi_validate_certs: no
-   ansible_httpapi_port: 443
   tasks:
       
    - name: retrieve all the scripts
