@@ -1,0 +1,25 @@
+---
+- hosts: fortimanager
+  collections:
+   - fortinet.fortimanager
+  connection: httpapi
+  gather_facts: no
+  vars:
+   vdom: "root"
+   ansible_httpapi_use_ssl: yes
+   ansible_httpapi_validate_certs: no
+   ansible_httpapi_port: 443
+  tasks:
+      
+   - name: retrieve all the scripts
+     fortinet.fortimanager.fmgr_fact:
+       facts:
+           selector: 'dvmdb_script'
+           params:
+               adom: 'root'
+               script: ''     
+     register: facts
+
+   - name: Print data
+     debug:
+       msg: "{{ facts }}"
