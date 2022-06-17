@@ -2,18 +2,9 @@
 - hosts: fortigate
   collections:
    - fortinet.fortios
-  connection: httpapi
   gather_facts: no
-  vars:
-   vdom: "root"
-   ansible_httpapi_use_ssl: yes
-   ansible_httpapi_validate_certs: no
-   ansible_httpapi_port: 443
   tasks:
-
-  - debug:
-      msg: "{{ ansible_user }} {{ ansible_password }}"
-      
+  
   - name: Configure devices.
     fortios_firewall_policy:
       vdom:  root
