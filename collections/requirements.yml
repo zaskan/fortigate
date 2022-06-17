@@ -1,4 +1,5 @@
 ---
 collections:
+- ansible.netcommon
 - fortinet.fortios
 - fortinet.fortimanager  
