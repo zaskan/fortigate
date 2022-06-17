@@ -2,7 +2,7 @@
 - hosts: fortimanager
   collections:
    - fortinet.fortimanager
-   - ansible.netcommon.httpapi 
+   - ansible.builtin.httpapi 
   gather_facts: no
   tasks:
       
